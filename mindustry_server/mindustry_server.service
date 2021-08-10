@@ -8,11 +8,11 @@ Type=simple
 User=steamuser
 Group=steamuser
 WorkingDirectory=/home/steamuser/mindustry_server_latest/
-#ExecStart=/usr/bin/screen -D -m -S "mindustry_server" -L "cd /home/steamuser/mindustry_server_latest;java -jar server.jar"
+ExecStart=/usr/bin/screen -D -m -S "mindustry_server" -L java -jar server.jar
 #following line is only for test
-ExecStart=/usr/bin/screen -D -m -S "scr_bash" -L "/bin/bash"
-#ExecStop=/home/steamuser/mindustry_server_latest/stop.sh
-#ExecReload=/home/steamuser/mindustry_server_latest/restart.sh
+#ExecStart=/usr/bin/screen -D -m -S "scr_bash" -L "/bin/bash"
+ExecStop=/home/steamuser/mindustry_server_latest/stop.sh
+ExecReload=/home/steamuser/mindustry_server_latest/restart.sh
 Restart=always
 RestartSec=20
 
