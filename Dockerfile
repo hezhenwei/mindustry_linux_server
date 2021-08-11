@@ -6,4 +6,6 @@ COPY --chown=steamuser ./mindustry_server_latest /home/steamuser/mindustry_serve
 
 USER steamuser
 WORKDIR /home/steamuser/mindustry_server_latest
-CMD /opt/java/openjdk/bin/java -jar server.jar
+CMD /bin/bash /opt/java/openjdk/bin/java -jar server.jar
+
+EXPOSE 6567
