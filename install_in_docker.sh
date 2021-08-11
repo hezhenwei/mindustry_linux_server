@@ -4,7 +4,7 @@ sudo apt install docker -y
 
 sudo docker pull adoptopenjdk/openjdk11:jre
 
-sudo docker create  --name mindustry_server  adoptopenjdk/openjdk11:jre mtdserver1292
+sudo docker build ./ -t -t mtdserver:129.2-plugin-lobby-wayzer
 
 sudo docker start
 
