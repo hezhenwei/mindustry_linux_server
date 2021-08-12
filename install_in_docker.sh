@@ -17,6 +17,12 @@ sudo apt install docker.io unzip -y
 sudo docker pull adoptopenjdk/openjdk11:jre
 
 # download the server tar file and unzip first then
+mkdir ./mindustry_server/
+wget https://github.com/Anuken/Mindustry/releases/download/v129.2/server-release.jar
+mv ./server-release.jar ./mindustry_server/
+echo "java -jar server-release.jar" > ./mindustry_server/run_server.sh
+chmod 755 ./mindustry_server/run_server.sh
+
 mkdir ./mindustry_server_latest/config
 mkdir ./mindustry_server_latest/config/mods
 wget https://github.com/way-zer/ScriptAgent4MindustryExt/releases/download/v2.9.0/ScriptAgent4Mindustry-2.9.jar
