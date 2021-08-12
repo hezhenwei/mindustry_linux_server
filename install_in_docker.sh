@@ -39,7 +39,7 @@ wget https://github.com/hezhenwei/mindustry_linux_server/raw/main/Dockerfile
 
 sudo docker build ./ -t hezhenwei/mtdserver:129.2-plugin-lobby-wayzer
 
-sudo docker create -it -p 6568:6567 --name mymtd hezhenwei/mtdserver:129.2-plugin-lobby-wayzer
+sudo docker create -it -p 6567:6567 -p 6567:6567/udp --name mymtd hezhenwei/mtdserver:129.2-plugin-lobby-wayzer
 
 sudo docker start mymtd
 ~
