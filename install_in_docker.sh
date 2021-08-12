@@ -11,7 +11,8 @@ else
    echo its $me.
 fi
 
-sudo apt install docker -y
+sudo apt update
+sudo apt install docker unzip -y
 
 sudo docker pull adoptopenjdk/openjdk11:jre
 
