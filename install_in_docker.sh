@@ -1,5 +1,16 @@
 #!/bin/bash
 
+#if it's root create steamuser account 
+me=$(whoami)
+
+if [ $me=='root' ];
+then
+   echo it's root. now create steamuser account of host
+   useradd -m -U -s /bin/bash steamuser 
+else
+   echo its $me.
+fi
+
 sudo apt install docker -y
 
 sudo docker pull adoptopenjdk/openjdk11:jre
