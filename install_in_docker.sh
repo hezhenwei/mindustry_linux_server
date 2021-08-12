@@ -17,11 +17,11 @@ sudo apt install docker.io unzip -y
 sudo docker pull adoptopenjdk/openjdk11:jre
 
 # download the server tar file and unzip first then
-mkdir ./mindustry_server/
+mkdir ./mindustry_server_latest/
 wget https://github.com/Anuken/Mindustry/releases/download/v129.2/server-release.jar
-mv ./server-release.jar ./mindustry_server/
-echo "java -jar server-release.jar" > ./mindustry_server/run_server.sh
-chmod 755 ./mindustry_server/run_server.sh
+mv ./server-release.jar ./mindustry_server_latest/
+echo "java -jar server-release.jar" > ./mindustry_server_latest/run_server.sh
+chmod 755 ./mindustry_server_latest/run_server.sh
 
 mkdir ./mindustry_server_latest/config
 mkdir ./mindustry_server_latest/config/mods
