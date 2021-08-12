@@ -16,6 +16,9 @@ sudo apt install docker.io unzip -y
 
 sudo docker pull adoptopenjdk/openjdk11:jre
 
+# the dir to save maps.
+mkdir ./mindustry_maps
+
 # download the server tar file and unzip first then
 mkdir ./mindustry_server_latest/
 wget https://github.com/Anuken/Mindustry/releases/download/v129.2/server-release.jar
@@ -37,9 +40,9 @@ mv ./ScriptAgent4Mindustry-2.9.0-scripts ./mindustry_server_latest/config/script
 
 wget https://github.com/hezhenwei/mindustry_linux_server/raw/main/Dockerfile
 
-sudo docker build ./ -t hezhenwei/mtdserver:129.2-plugin-lobby-wayzer
+sudo docker build ./ -t hezhenwei/mtdserver:129.2
 
-sudo docker create -it -p 6567:6567 -p 6567:6567/udp --name mymtd hezhenwei/mtdserver:129.2-plugin-lobby-wayzer
+sudo docker create -it -p 6567:6567 -p 6567:6567/udp -v ./mindustry_maps:/home/steamuser/mindustry_server_latest/config/maps --name mymtd hezhenwei/mtdserver:129.2-plugin-lobby-wayzer
 
 sudo docker start mymtd
 ~
