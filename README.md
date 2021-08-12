@@ -3,15 +3,9 @@
 Steps to serve a linux mindustry server.
 I just like to save the steps so next time i woun't need to re-do it again.
 
-you can choose to setup manually or setup in docker.
+you can go to "Setup a server in docker" section directly..<br/>
 Also you may optionally choose to setup a webserver to manage maps
 
-## Setup Manually
-get MDTSteamLobbyPlugin mod here:
-https://github.com/shugen002/MDTSteamLobbyPlugin
-
-get wayzer server mod here:
-https://github.com/way-zer/ScriptAgent4MindustryExt
 
  
  
@@ -28,4 +22,13 @@ script in folder "webserver" will create a apache web server at port 20080
 and link the folder mindustry_maps using tinyfilemanager to uploadfiles.
 need to change userpass in config.php
 need to change maps to 777 to allow it to write.
+
 tinyfilemanager is used.
+
+
+## Some plugin links
+get MDTSteamLobbyPlugin mod here:
+https://github.com/shugen002/MDTSteamLobbyPlugin
+
+get wayzer server mod here:
+https://github.com/way-zer/ScriptAgent4MindustryExt
