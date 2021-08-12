@@ -29,6 +29,8 @@ mv ./ScriptAgent4Mindustry-2.9.0-scripts ./mindustry_server_latest/config/script
 #wget https://github.com/shugen002/MDTSteamLobbyPlugin/releases/download/1.2.0/MDTSteamLobbyPlugin.jar
 #mv ./MDTSteamLobbyPlugin.jar ./mindustry_server_latest/config/mods
 
+wget https://github.com/hezhenwei/mindustry_linux_server/raw/main/Dockerfile
+
 sudo docker build ./ -t hezhenwei/mtdserver:129.2-plugin-lobby-wayzer
 
 sudo docker create -it -p 6568:6567 --name mymtd hezhenwei/mtdserver:129.2-plugin-lobby-wayzer
