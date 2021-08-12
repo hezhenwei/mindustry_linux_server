@@ -12,7 +12,7 @@ else
 fi
 
 sudo apt update
-sudo apt install docker unzip -y
+sudo apt install docker.io unzip -y
 
 sudo docker pull adoptopenjdk/openjdk11:jre
 
