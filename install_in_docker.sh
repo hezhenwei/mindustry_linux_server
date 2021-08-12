@@ -5,7 +5,7 @@ me=$(whoami)
 
 if [ $me=='root' ];
 then
-   echo it's root. now create steamuser account of host
+   echo "it's root. now create steamuser account of host"
    useradd -m -U -s /bin/bash steamuser 
 else
    echo its $me.
